@@ -11,7 +11,8 @@ description:{
 },
 completed:{
     type:Boolean,
-    require:true
+    require:true,
+    default:false
 },
 user:{
     type:mongoose.Schema.Types.ObjectId,
@@ -20,5 +21,5 @@ user:{
 }
 },{timestamps:true})
 
-const User= mongoose.model('users',userSchema)
-module.exports=User
+const TODOS= mongoose.model('todos',userSchema)
+module.exports=TODOS
