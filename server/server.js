@@ -10,6 +10,9 @@ app.use(express.urlencoded({extended:true}))
 
 app.use('/api/users',require('./routes/userRoute'))
 app.use('/api/todos',require('./routes/todoRoute'))
+app.post('/webhook', (req,res)=>{
+    console.log("::: Webhook called with :::", req);
+})
 
 app.listen(process.env.PORT,()=>{
     console.log("server is successfully run on ",process.env.PORT);
