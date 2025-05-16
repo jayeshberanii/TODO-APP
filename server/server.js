@@ -13,6 +13,9 @@ app.use('/api/todos',require('./routes/todoRoute'))
 app.post('/webhook', (req,res)=>{
     console.log("::: Webhook called with :::", req);
 })
+app.get('/test', (req,res)=>{
+    console.log("::: test url working :::", req);
+})
 
 app.listen(process.env.PORT,()=>{
     console.log("server is successfully run on ",process.env.PORT);
